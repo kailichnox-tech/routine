@@ -304,3 +304,64 @@ nav button.on .ic { filter: none; opacity: 1; }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 .pop { animation: pop .6s ease; }
 @keyframes pop { 0% { transform: scale(1); } 40% { transform: scale(1.04); } 100% { transform: scale(1); } }
+
+/* ===== Trainingsplan ===== */
+.nextplan { padding: 12px 14px; border-radius: 14px; background: var(--gym-soft); margin-bottom: 10px; }
+.nextplan b { display: block; font-size: 17px; margin: 1px 0 2px; }
+.muschips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.muschips span { font-size: 12px; padding: 4px 9px; border-radius: 99px; background: var(--soft); color: var(--muted); font-weight: 600; }
+.muschips b { color: var(--text); }
+.planhdr { display: flex; flex-direction: column; gap: 2px; padding: 12px 14px; border-radius: 14px; background: var(--gym-soft); margin-bottom: 10px; }
+.planhdr b { font-size: 16px; }
+.tips { font-size: 13px; color: var(--muted); display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+.infotoggle { width: 100%; text-align: left; padding: 11px 14px; border-radius: 12px; background: var(--soft); font-size: 14px; font-weight: 650; color: var(--muted); }
+.planinfo { padding: 4px 14px 2px; font-size: 14px; line-height: 1.5; }
+.planinfo h4 { margin: 14px 0 4px; font-size: 14px; }
+.planinfo ol { margin: 4px 0; padding-left: 20px; }
+.planinfo p { margin: 6px 0; color: var(--muted); }
+.exhead2 { display: flex; align-items: flex-start; gap: 10px; }
+.exnum { width: 28px; height: 28px; border-radius: 9px; background: var(--gym-soft); color: var(--gym); font-weight: 750; font-size: 14px; display: grid; place-items: center; flex: none; margin-top: 2px; }
+.exname { flex: 1; min-width: 0; }
+.exname b { font-size: 15px; }
+.exname small { display: block; font-size: 12px; color: var(--muted); margin-top: 1px; }
+.opt { font-size: 10.5px; font-weight: 700; color: var(--muted); background: var(--soft); padding: 2px 6px; border-radius: 6px; margin-left: 6px; vertical-align: 1px; }
+.exnote { font-size: 12.5px; color: var(--muted); margin: 8px 2px 0; line-height: 1.4; }
+.hintline { font-size: 12.5px; font-weight: 650; margin: 6px 2px 0; color: var(--muted); }
+.hintline.up { color: var(--supp); }
+.hintline.new { color: var(--water); }
+.excard.complete { border-color: var(--supp); }
+.excard.complete .exnum { background: var(--supp); color: #fff; }
+.setok { width: 38px; height: 42px; border-radius: 12px; background: var(--soft); color: var(--muted); font-size: 17px; font-weight: 700; flex: none; }
+.setrow.done .setok { background: var(--supp); color: #fff; }
+.setrow.done .inp { background: var(--supp-soft); border-color: transparent; }
+.setrow .del.sm { width: 32px; }
+.exfoot { display: flex; gap: 8px; margin-top: 4px; }
+.exfoot .inp { flex: 1; font-size: 14px; padding: 9px 10px; }
+.exfoot .ghost { flex: none; padding: 9px 12px; }
+/* Pausen-Timer */
+.restbar { display: none; position: relative; overflow: hidden; align-items: center; gap: 10px; padding: 10px 16px; background: var(--gym-soft); border-bottom: 1px solid var(--line); }
+.restbar.on { display: flex; }
+.rb-fill { position: absolute; left: 0; top: 0; bottom: 0; background: var(--gym); opacity: .18; transition: width .25s linear; }
+.rb-time { position: relative; font-size: 22px; font-weight: 800; color: var(--gym); font-variant-numeric: tabular-nums; }
+.rb-label { position: relative; flex: 1; font-size: 13px; font-weight: 600; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.restbar button { position: relative; font-size: 13px; font-weight: 700; padding: 7px 10px; border-radius: 10px; background: var(--card); }
+/* Plan-Editor */
+.planday { border: 1px solid var(--line); border-radius: 14px; margin-bottom: 8px; overflow: hidden; }
+.planday.open { padding: 0 10px; }
+.planhead { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 12px; text-align: left; }
+.planday.open .planhead { padding: 12px 2px; }
+.planex { border-top: 1px solid var(--line); padding: 10px 0; }
+
+/* ===== Verlaufs-Grafiken ===== */
+.seg.sm { margin-top: -6px; }
+.seg.sm button { padding: 7px 2px; font-size: 12.5px; }
+.axchart { width: 100%; height: auto; display: block; overflow: visible; }
+.axchart text { fill: var(--muted); font-size: 10px; font-family: inherit; }
+.axchart text.unit { font-weight: 700; font-size: 9.5px; }
+.axchart text.goaltxt { font-size: 9.5px; font-weight: 700; fill: var(--muted); }
+.axchart .grid { stroke: var(--line); stroke-width: 1; stroke-dasharray: 3 3; }
+.axchart .axis { stroke: var(--muted); stroke-width: 1; opacity: .6; }
+.axchart .goal { stroke: var(--text); stroke-width: 1.4; stroke-dasharray: 6 4; opacity: .45; }
+.axchart .hit { fill: transparent; cursor: pointer; }
+.legend i.ltrend { width: 14px; height: 0; border-radius: 0; border-top: 2px dashed var(--text); opacity: .55; vertical-align: 3px; }
+.legend i.lgoal { width: 14px; height: 0; border-radius: 0; border-top: 2px dashed var(--muted); vertical-align: 3px; }
