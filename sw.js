@@ -1,5 +1,5 @@
 // Offline-Speicher für die App. Bei Änderungen an der App die Versionsnummer erhöhen.
-const CACHE = 'routine-v3';
+const CACHE = 'routine-v4';
 const FILES = ['./', 'index.html', 'styles.css', 'app.js', 'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'];
 
 self.addEventListener('install', e => {
